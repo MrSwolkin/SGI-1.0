@@ -1,0 +1,79 @@
+{% extends "public/base_public.html" %}
+
+{% block title %}Início{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-violet-600/10 via-transparent to-indigo-600/10"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+            <span class="text-gray-100">Gerencie seus</span><br>
+            <span class="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">investimentos</span>
+            <span class="text-gray-100"> com clareza</span>
+        </h1>
+        <p class="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-400 leading-relaxed">
+            Acompanhe sua carteira de renda variável em um só lugar. Registre transações, visualize sua composição e tome decisões com dados reais.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="{% url 'accounts:register' %}"
+               class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 rounded-lg text-base font-semibold bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-500 hover:to-indigo-500 transition-all shadow-lg shadow-violet-500/25">
+                Criar conta grátis
+            </a>
+            <a href="{% url 'accounts:login' %}"
+               class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 rounded-lg text-base font-semibold border border-gray-700 text-gray-300 hover:text-gray-100 hover:border-gray-600 hover:bg-gray-800/50 transition-all">
+                Já tenho conta
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+        <div class="text-center mb-16">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-100">Tudo o que você precisa</h2>
+            <p class="mt-3 text-gray-400">Funcionalidades pensadas para o investidor pessoa física.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-lg">
+                <div class="w-10 h-10 rounded-lg bg-violet-500/10 flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-100">Dashboard completo</h3>
+                <p class="mt-2 text-sm text-gray-400 leading-relaxed">
+                    Visualize o total investido, composição por tipo de ativo e suas maiores posições em um painel intuitivo.
+                </p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-lg">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-100">Registro de transações</h3>
+                <p class="mt-2 text-sm text-gray-400 leading-relaxed">
+                    Registre compras e vendas de ações, FIIs, ETFs e ativos internacionais com controle de taxas e datas.
+                </p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-lg">
+                <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
+                    </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-100">Composição da carteira</h3>
+                <p class="mt-2 text-sm text-gray-400 leading-relaxed">
+                    Gráficos de distribuição por tipo de ativo e preço médio ponderado calculado automaticamente.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
