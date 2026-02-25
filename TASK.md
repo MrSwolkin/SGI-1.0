@@ -30,35 +30,35 @@
 
 ---
 
-### Sprint 1 — Design System e Templates Base
+### Sprint 1 — Design System e Templates Base ✅
 
-#### Tarefa 1.1 — Estrutura de templates
-- [ ] 1.1.1 Criar pasta `templates/` na raiz do projeto
-- [ ] 1.1.2 Criar subpastas: `templates/accounts/`, `templates/assets/`, `templates/transactions/`, `templates/portfolios/`, `templates/public/`
-- [ ] 1.1.3 Criar arquivo `templates/base.html` com o layout base do sistema autenticado
-- [ ] 1.1.4 Criar arquivo `templates/public/base_public.html` com layout base para páginas públicas
+#### Tarefa 1.1 — Estrutura de templates ✅
+- [X] 1.1.1 Criar pasta `templates/` na raiz do projeto
+- [X] 1.1.2 Criar subpastas: `templates/accounts/`, `templates/assets/`, `templates/transactions/`, `templates/portfolios/`, `templates/public/`
+- [X] 1.1.3 Criar arquivo `templates/base.html` com o layout base do sistema autenticado
+- [X] 1.1.4 Criar arquivo `templates/public/base_public.html` com layout base para páginas públicas
 
-#### Tarefa 1.2 — Implementar `base.html` (área autenticada)
-- [ ] 1.2.1 Adicionar `<head>` com meta tags, title block, importação do TailwindCSS via CDN e fonte Inter
-- [ ] 1.2.2 Implementar sidebar de navegação com logo Finanpy (gradiente violeta/índigo)
-- [ ] 1.2.3 Adicionar links de navegação na sidebar: Dashboard, Transações, Ativos
-- [ ] 1.2.4 Implementar estado ativo no link de navegação usando `request.resolver_match.url_name`
-- [ ] 1.2.5 Adicionar informações do usuário e botão de logout no rodapé da sidebar
-- [ ] 1.2.6 Implementar área `main` com `{% block content %}{% endblock %}`
-- [ ] 1.2.7 Adicionar área de mensagens (Django messages framework) com estilos de sucesso/erro/aviso
-- [ ] 1.2.8 Garantir que o layout seja responsivo com menu hamburguer para mobile (TailwindCSS)
+#### Tarefa 1.2 — Implementar `base.html` (área autenticada) ✅
+- [X] 1.2.1 Adicionar `<head>` com meta tags, title block, importação do TailwindCSS via CDN e fonte Inter
+- [X] 1.2.2 Implementar sidebar de navegação com logo Finanpy (gradiente violeta/índigo)
+- [X] 1.2.3 Adicionar links de navegação na sidebar: Dashboard, Transações, Ativos
+- [X] 1.2.4 Implementar estado ativo no link de navegação usando `request.resolver_match.url_name`
+- [X] 1.2.5 Adicionar informações do usuário e botão de logout no rodapé da sidebar
+- [X] 1.2.6 Implementar área `main` com `{% block content %}{% endblock %}`
+- [X] 1.2.7 Adicionar área de mensagens (Django messages framework) com estilos de sucesso/erro/aviso
+- [X] 1.2.8 Garantir que o layout seja responsivo com menu hamburguer para mobile (TailwindCSS)
 
-#### Tarefa 1.3 — Implementar `base_public.html`
-- [ ] 1.3.1 Criar header com logo e links de Cadastro e Login
-- [ ] 1.3.2 Implementar fundo escuro com gradiente sutil
-- [ ] 1.3.3 Adicionar footer simples com nome do produto
+#### Tarefa 1.3 — Implementar `base_public.html` ✅
+- [X] 1.3.1 Criar header com logo e links de Cadastro e Login
+- [X] 1.3.2 Implementar fundo escuro com gradiente sutil
+- [X] 1.3.3 Adicionar footer simples com nome do produto
 
-#### Tarefa 1.4 — Componentes reutilizáveis (includes)
-- [ ] 1.4.1 Criar `templates/components/card_metric.html` para cards de métricas do dashboard
-- [ ] 1.4.2 Criar `templates/components/table.html` como estrutura base de tabelas
-- [ ] 1.4.3 Criar `templates/components/form_field.html` para renderização padronizada de campos de formulário
-- [ ] 1.4.4 Criar `templates/components/badge.html` para badges de tipo (Compra/Venda, tipo de ativo)
-- [ ] 1.4.5 Criar `templates/components/empty_state.html` para estado de lista vazia
+#### Tarefa 1.4 — Componentes reutilizáveis (includes) ✅
+- [X] 1.4.1 Criar `templates/components/card_metric.html` para cards de métricas do dashboard
+- [X] 1.4.2 Criar `templates/components/table.html` como estrutura base de tabelas
+- [X] 1.4.3 Criar `templates/components/form_field.html` para renderização padronizada de campos de formulário
+- [X] 1.4.4 Criar `templates/components/badge.html` para badges de tipo (Compra/Venda, tipo de ativo)
+- [X] 1.4.5 Criar `templates/components/empty_state.html` para estado de lista vazia
 
 ---
 

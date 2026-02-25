@@ -1,0 +1,8 @@
+{# {% include "components/card_metric.html" with title="Total Investido" value="R$ 15.000,00" subtitle="4 ativos" color="text-emerald-400" %} #}
+<div class="bg-gray-900 border border-gray-800 rounded-xl p-5 shadow-lg">
+    <p class="text-sm font-medium text-gray-400">{{ title }}</p>
+    <p class="mt-2 text-2xl font-bold {{ color|default:'text-gray-100' }}">{{ value|default:"—" }}</p>
+    {% if subtitle %}
+    <p class="mt-1 text-xs text-gray-500">{{ subtitle }}</p>
+    {% endif %}
+</div>
