@@ -40,8 +40,8 @@ INSTALLED_APPS = [
 
     'accounts',
     'portfolios',
-    'assests',
-    'transations',
+    'assets',
+    'transactions',
 ]
 
 MIDDLEWARE = [

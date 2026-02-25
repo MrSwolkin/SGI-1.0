@@ -74,12 +74,11 @@ app_name/
 
 ```
 CustomUser (accounts): email (unique, USERNAME_FIELD), first_name, last_name
-Asset (assests): ticker (unique), name, asset_type (STOCK/FII/ETF/INTERNATIONAL), currency (BRL/USD)
-Transaction (transations): user (FK), asset (FK), transaction_type (BUY/SELL), quantity, unit_price, fee, operation_date
+Asset (assets): ticker (unique), name, asset_type (STOCK/FII/ETF/INTERNATIONAL), currency (BRL/USD)
+Transaction (transactions): user (FK), asset (FK), transaction_type (BUY/SELL), quantity, unit_price, fee, operation_date
 Portfolio (portfolios): user (OneToOne)
 ```
 
-Nota: os nomes das apps `assests` e `transations` contem erros de digitacao, mas estao estabelecidos no codebase. Manter como estao.
 
 ## Uso do Context7
 
