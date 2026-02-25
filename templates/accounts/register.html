@@ -1,0 +1,39 @@
+{% extends "public/base_public.html" %}
+
+{% block title %}Cadastro{% endblock %}
+
+{% block content %}
+<div class="flex-1 flex items-center justify-center px-4 py-12 sm:py-16">
+    <div class="w-full max-w-md">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-100">Crie sua conta</h1>
+            <p class="mt-2 text-sm text-gray-400">Comece a gerenciar seus investimentos agora.</p>
+        </div>
+
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-xl">
+            <form method="post" class="space-y-5">
+                {% csrf_token %}
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {% include "components/form_field.html" with field=form.first_name %}
+                    {% include "components/form_field.html" with field=form.last_name %}
+                </div>
+
+                {% include "components/form_field.html" with field=form.email %}
+                {% include "components/form_field.html" with field=form.password1 %}
+                {% include "components/form_field.html" with field=form.password2 %}
+
+                <button type="submit"
+                        class="w-full flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-semibold bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-500 hover:to-indigo-500 transition-all shadow-lg shadow-violet-500/25">
+                    Criar conta
+                </button>
+            </form>
+        </div>
+
+        <p class="mt-6 text-center text-sm text-gray-400">
+            Já tem uma conta?
+            <a href="{% url 'accounts:login' %}" class="text-violet-400 hover:text-violet-300 font-medium transition-colors">Faça login</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "public/base_public.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="flex-1 flex items-center justify-center px-4 py-12 sm:py-16">
+    <div class="w-full max-w-md">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-100">Bem-vindo de volta</h1>
+            <p class="mt-2 text-sm text-gray-400">Acesse sua conta para continuar.</p>
+        </div>
+
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-xl">
+            <form method="post" class="space-y-5">
+                {% csrf_token %}
+
+                {% if form.non_field_errors %}
+                <div class="px-4 py-3 rounded-lg text-sm bg-red-500/10 border border-red-500/20 text-red-400">
+                    {% for error in form.non_field_errors %}
+                    <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% include "components/form_field.html" with field=form.username %}
+                {% include "components/form_field.html" with field=form.password %}
+
+                <button type="submit"
+                        class="w-full flex items-center justify-center px-4 py-2.5 rounded-lg text-sm font-semibold bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-500 hover:to-indigo-500 transition-all shadow-lg shadow-violet-500/25">
+                    Entrar
+                </button>
+            </form>
+        </div>
+
+        <p class="mt-6 text-center text-sm text-gray-400">
+            Não tem uma conta?
+            <a href="{% url 'accounts:register' %}" class="text-violet-400 hover:text-violet-300 font-medium transition-colors">Crie agora</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

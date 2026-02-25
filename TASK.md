@@ -62,34 +62,34 @@
 
 ---
 
-### Sprint 2 — Site Público e Autenticação
+### Sprint 2 — Site Público e Autenticação ✅
 
-#### Tarefa 2.1 — Landing Page
-- [ ] 2.1.1 Criar view `LandingPageView` (TemplateView) em `accounts/views.py` ou em uma view standalone
-- [ ] 2.1.2 Criar template `templates/public/landing.html` extendendo `base_public.html`
-- [ ] 2.1.3 Implementar seção hero com título, subtítulo e botões de Cadastro e Login
-- [ ] 2.1.4 Implementar seção de features resumidas do produto
-- [ ] 2.1.5 Configurar URL `/` apontando para `LandingPageView`
-- [ ] 2.1.6 Redirecionar usuário já autenticado para o dashboard ao acessar a landing page
+#### Tarefa 2.1 — Landing Page ✅
+- [X] 2.1.1 Criar view `LandingPageView` (TemplateView) em `accounts/views.py` ou em uma view standalone
+- [X] 2.1.2 Criar template `templates/public/landing.html` extendendo `base_public.html`
+- [X] 2.1.3 Implementar seção hero com título, subtítulo e botões de Cadastro e Login
+- [X] 2.1.4 Implementar seção de features resumidas do produto
+- [X] 2.1.5 Configurar URL `/` apontando para `LandingPageView`
+- [X] 2.1.6 Redirecionar usuário já autenticado para o dashboard ao acessar a landing page
 
-#### Tarefa 2.2 — Formulário de Cadastro
-- [ ] 2.2.1 Criar `CustomUserCreationForm` em `accounts/forms.py` com campos: `first_name`, `last_name`, `email`, `password1`, `password2`
-- [ ] 2.2.2 Adicionar validação de email único no `clean_email()`
-- [ ] 2.2.3 Criar `RegisterView` (FormView ou CreateView) em `accounts/views.py`
-- [ ] 2.2.4 Criar template `templates/accounts/register.html` com o formulário de cadastro estilizado
-- [ ] 2.2.5 Após cadastro, redirecionar para a tela de login com mensagem de sucesso
-- [ ] 2.2.6 Configurar URL `/cadastro/` para `RegisterView`
+#### Tarefa 2.2 — Formulário de Cadastro ✅
+- [X] 2.2.1 Criar `CustomUserCreationForm` em `accounts/forms.py` com campos: `first_name`, `last_name`, `email`, `password1`, `password2`
+- [X] 2.2.2 Adicionar validação de email único no `clean_email()`
+- [X] 2.2.3 Criar `RegisterView` (FormView ou CreateView) em `accounts/views.py`
+- [X] 2.2.4 Criar template `templates/accounts/register.html` com o formulário de cadastro estilizado
+- [X] 2.2.5 Após cadastro, redirecionar para a tela de login com mensagem de sucesso
+- [X] 2.2.6 Configurar URL `/cadastro/` para `RegisterView`
 
-#### Tarefa 2.3 — Formulário de Login
-- [ ] 2.3.1 Criar `EmailAuthenticationForm` em `accounts/forms.py` extendendo `AuthenticationForm` para usar email
-- [ ] 2.3.2 Criar `CustomLoginView` extendendo `LoginView` do Django com `form_class = EmailAuthenticationForm`
-- [ ] 2.3.3 Criar template `templates/accounts/login.html` com formulário de login estilizado
-- [ ] 2.3.4 Configurar URL `/login/` para `CustomLoginView`
+#### Tarefa 2.3 — Formulário de Login ✅
+- [X] 2.3.1 Criar `EmailAuthenticationForm` em `accounts/forms.py` extendendo `AuthenticationForm` para usar email
+- [X] 2.3.2 Criar `CustomLoginView` extendendo `LoginView` do Django com `form_class = EmailAuthenticationForm`
+- [X] 2.3.3 Criar template `templates/accounts/login.html` com formulário de login estilizado
+- [X] 2.3.4 Configurar URL `/login/` para `CustomLoginView`
 
-#### Tarefa 2.4 — Logout
-- [ ] 2.4.1 Usar a `LogoutView` nativa do Django
-- [ ] 2.4.2 Configurar URL `/logout/` e `LOGOUT_REDIRECT_URL = '/'` no settings
-- [ ] 2.4.3 Adicionar link de logout na sidebar do `base.html`
+#### Tarefa 2.4 — Logout ✅
+- [X] 2.4.1 Usar a `LogoutView` nativa do Django
+- [X] 2.4.2 Configurar URL `/logout/` e `LOGOUT_REDIRECT_URL = '/'` no settings
+- [X] 2.4.3 Adicionar link de logout na sidebar do `base.html`
 
 ---
 
