@@ -175,7 +175,8 @@ pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python
 
-negociacoes.xslx
-nova_tabela.csv
 
+negociacoes.xlsx
+nova_tabela.csv
 manipulando.py
+

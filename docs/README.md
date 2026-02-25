@@ -17,4 +17,4 @@
 
 O SGI (Sistema de Gestão de investimento) e uma aplicacao web full stack em Django para gestao pessoal de investimentos em renda variavel. Permite registrar, acompanhar e analisar operacoes de compra e venda de ativos financeiros (acoes, FIIs, ETFs e stocks internacionais).
 
-Para detalhes completos de requisitos e planejamento, consulte o [PRD do projeto](../PRD_finanpy.md).
+Para detalhes completos de requisitos e planejamento, consulte o [PRD do projeto](../PRD.md).
