@@ -14,7 +14,7 @@ SGI/
 │   ├── wsgi.py             # Entry point WSGI
 │   └── asgi.py             # Entry point ASGI
 │
-├── assests/                # App: Gestao de ativos financeiros
+├── assets/                 # App: Gestao de ativos financeiros
 │   ├── models.py
 │   ├── views.py
 │   ├── admin.py
@@ -22,7 +22,7 @@ SGI/
 │   ├── tests.py
 │   └── migrations/
 │
-├── transations/            # App: Registro de transacoes (compra/venda)
+├── transactions/           # App: Registro de transacoes (compra/venda)
 │   ├── models.py
 │   ├── views.py
 │   ├── admin.py
@@ -51,8 +51,8 @@ O projeto esta organizado em 3 apps:
 
 | App | Responsabilidade |
 |---|---|
-| `assests` | Cadastro e listagem de ativos (acoes, FIIs, ETFs, stocks) |
-| `transations` | Registro, edicao e exclusao de transacoes de compra e venda |
+| `assets` | Cadastro e listagem de ativos (acoes, FIIs, ETFs, stocks) |
+| `transactions` | Registro, edicao e exclusao de transacoes de compra e venda |
 | `portfolios` | Dashboard com resumo consolidado da carteira e graficos |
 
 ## Fluxo de Dados

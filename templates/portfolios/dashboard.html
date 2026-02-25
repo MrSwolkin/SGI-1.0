@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <h1 class="text-3xl font-bold text-gray-100">Dashboard</h1>
+    <div class="bg-gray-900 border border-gray-800 rounded-xl">
+        {% include "components/empty_state.html" with title="Dashboard em construção" description="O painel de controle será implementado em breve. Enquanto isso, cadastre seus ativos e transações." action_url=assets_url action_label="Ver Ativos" %}
+    </div>
+</div>
+{% endblock %}

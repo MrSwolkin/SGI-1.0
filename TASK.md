@@ -95,33 +95,33 @@
 
 ### Sprint 3 — App de Ativos (Assets)
 
-#### Tarefa 3.1 — Model `Asset`
-- [ ] 3.1.1 Criar model `Asset` em `assets/models.py` com campos: `ticker` (CharField, unique), `name` (CharField), `asset_type` (CharField com choices: STOCK, FII, ETF, INTERNATIONAL), `currency` (CharField com choices: BRL, USD)
-- [ ] 3.1.2 Adicionar campos `created_at` (auto_now_add) e `updated_at` (auto_now)
-- [ ] 3.1.3 Implementar método `__str__` retornando `f'{self.ticker} - {self.name}'`
-- [ ] 3.1.4 Criar e executar a migração do model Asset
+#### Tarefa 3.1 — Model `Asset` ✅
+- [X] 3.1.1 Criar model `Asset` em `assets/models.py` com campos: `ticker` (CharField, unique), `name` (CharField), `asset_type` (CharField com choices: STOCK, FII, ETF, INTERNATIONAL), `currency` (CharField com choices: BRL, USD)
+- [X] 3.1.2 Adicionar campos `created_at` (auto_now_add) e `updated_at` (auto_now)
+- [X] 3.1.3 Implementar método `__str__` retornando `f'{self.ticker} - {self.name}'`
+- [X] 3.1.4 Criar e executar a migração do model Asset
 
-#### Tarefa 3.2 — Admin do Asset
-- [ ] 3.2.1 Registrar `Asset` no `assets/admin.py` com `list_display`, `search_fields` e `list_filter`
+#### Tarefa 3.2 — Admin do Asset ✅
+- [X] 3.2.1 Registrar `Asset` no `assets/admin.py` com `list_display`, `search_fields` e `list_filter`
 
-#### Tarefa 3.3 — Form de Asset
-- [ ] 3.3.1 Criar `AssetForm` em `assets/forms.py` usando `ModelForm`
-- [ ] 3.3.2 Estilizar os widgets do form com as classes Tailwind do design system
+#### Tarefa 3.3 — Form de Asset ✅
+- [X] 3.3.1 Criar `AssetForm` em `assets/forms.py` usando `ModelForm`
+- [X] 3.3.2 Estilizar os widgets do form com as classes Tailwind do design system
 
-#### Tarefa 3.4 — Views de Asset
-- [ ] 3.4.1 Criar `AssetListView` (ListView) em `assets/views.py` com `LoginRequiredMixin`
-- [ ] 3.4.2 Criar `AssetCreateView` (CreateView) com `LoginRequiredMixin`
-- [ ] 3.4.3 Configurar `success_url` com `reverse_lazy('assets:list')`
-- [ ] 3.4.4 Adicionar mensagem de sucesso ao criar ativo
+#### Tarefa 3.4 — Views de Asset ✅
+- [X] 3.4.1 Criar `AssetListView` (ListView) em `assets/views.py` com `LoginRequiredMixin`
+- [X] 3.4.2 Criar `AssetCreateView` (CreateView) com `LoginRequiredMixin`
+- [X] 3.4.3 Configurar `success_url` com `reverse_lazy('assets:list')`
+- [X] 3.4.4 Adicionar mensagem de sucesso ao criar ativo
 
-#### Tarefa 3.5 — Templates de Asset
-- [ ] 3.5.1 Criar `templates/assets/asset_list.html` com tabela de ativos e botão de novo ativo
-- [ ] 3.5.2 Criar `templates/assets/asset_form.html` com formulário de criação de ativo
-- [ ] 3.5.3 Tratar estado de lista vazia usando o componente `empty_state.html`
+#### Tarefa 3.5 — Templates de Asset ✅
+- [X] 3.5.1 Criar `templates/assets/asset_list.html` com tabela de ativos e botão de novo ativo
+- [X] 3.5.2 Criar `templates/assets/asset_form.html` com formulário de criação de ativo
+- [X] 3.5.3 Tratar estado de lista vazia usando o componente `empty_state.html`
 
-#### Tarefa 3.6 — URLs de Asset
-- [ ] 3.6.1 Criar `assets/urls.py` com rotas: `list` (`/ativos/`) e `create` (`/ativos/novo/`)
-- [ ] 3.6.2 Incluir `assets/urls.py` no `core/urls.py` com namespace `assets`
+#### Tarefa 3.6 — URLs de Asset ✅
+- [X] 3.6.1 Criar `assets/urls.py` com rotas: `list` (`/ativos/`) e `create` (`/ativos/novo/`)
+- [X] 3.6.2 Incluir `assets/urls.py` no `core/urls.py` com namespace `assets`
 
 ---
 

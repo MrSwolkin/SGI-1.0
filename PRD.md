@@ -645,13 +645,13 @@ Critérios de aceite:
 ### Sprint 3 — App de Ativos (Assets)
 
 #### Tarefa 3.1 — Model `Asset`
-- [ ] 3.1.1 Criar model `Asset` em `assets/models.py` com campos: `ticker` (CharField, unique), `name` (CharField), `asset_type` (CharField com choices: STOCK, FII, ETF, INTERNATIONAL), `currency` (CharField com choices: BRL, USD)
-- [ ] 3.1.2 Adicionar campos `created_at` (auto_now_add) e `updated_at` (auto_now)
-- [ ] 3.1.3 Implementar método `__str__` retornando `f'{self.ticker} - {self.name}'`
-- [ ] 3.1.4 Criar e executar a migração do model Asset
+- [X] 3.1.1 Criar model `Asset` em `assets/models.py` com campos: `ticker` (CharField, unique), `name` (CharField), `asset_type` (CharField com choices: STOCK, FII, ETF, INTERNATIONAL), `currency` (CharField com choices: BRL, USD)
+- [X] 3.1.2 Adicionar campos `created_at` (auto_now_add) e `updated_at` (auto_now)
+- [X] 3.1.3 Implementar método `__str__` retornando `f'{self.ticker} - {self.name}'`
+- [X] 3.1.4 Criar e executar a migração do model Asset
 
 #### Tarefa 3.2 — Admin do Asset
-- [ ] 3.2.1 Registrar `Asset` no `assets/admin.py` com `list_display`, `search_fields` e `list_filter`
+- [X] 3.2.1 Registrar `Asset` no `assets/admin.py` com `list_display`, `search_fields` e `list_filter`
 
 #### Tarefa 3.3 — Form de Asset
 - [ ] 3.3.1 Criar `AssetForm` em `assets/forms.py` usando `ModelForm`

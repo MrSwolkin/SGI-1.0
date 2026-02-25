@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Transações{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <h1 class="text-3xl font-bold text-gray-100">Transações</h1>
+    <div class="bg-gray-900 border border-gray-800 rounded-xl">
+        {% include "components/empty_state.html" with title="Nenhuma transação registrada" description="As transações serão implementadas em breve. Cadastre seus ativos primeiro." action_url=assets_url action_label="Ver Ativos" %}
+    </div>
+</div>
+{% endblock %}

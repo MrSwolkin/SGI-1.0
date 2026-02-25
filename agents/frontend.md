@@ -74,7 +74,7 @@ templates/
 ├── public/
 │   └── base_public.html         # Layout base para paginas publicas
 ├── accounts/                    # Login, cadastro
-├── assets/                      # Listagem e form de ativos (usar nome da app: assests ou assets conforme o projeto)
+├── assets/                      # Listagem e form de ativos
 ├── transactions/                # Listagem, form, confirmacao de exclusao
 ├── portfolios/                  # Dashboard
 └── components/                  # Componentes reutilizaveis

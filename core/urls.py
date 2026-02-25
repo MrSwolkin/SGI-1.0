@@ -7,7 +7,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', LandingPageView.as_view(), name='landing'),
     path('', include('accounts.urls')),
-    path('ativos/', include('assests.urls')),
-    path('transacoes/', include('transations.urls')),
+    path('ativos/', include('assets.urls')),
+    path('transacoes/', include('transactions.urls')),
     path('', include('portfolios.urls')),
 ]

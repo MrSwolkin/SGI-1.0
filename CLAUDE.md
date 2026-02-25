@@ -28,11 +28,9 @@ python manage.py test <app_name>
 ## Architecture
 
 Django project (`core/`) with 3 apps:
-- **assests/** — Financial assets (stocks, FIIs, ETFs, international stocks)
-- **transations/** — Buy/sell transaction records
+- **assets/** — Financial assets (stocks, FIIs, ETFs, international stocks)
+- **transactions/** — Buy/sell transaction records
 - **portfolios/** — Dashboard with portfolio summary and charts
-
-Note: app names `assests` and `transations` contain typos but are established in the codebase.
 
 Data flow: Templates → Views (CBV) → Forms → Models (ORM) → SQLite
 
