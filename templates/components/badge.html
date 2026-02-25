@@ -1,0 +1,9 @@
+{# {% include "components/badge.html" with label="Compra" variant="success" %} #}
+{# Variantes: success (verde), danger (vermelho), warning (amarelo), default (violeta) #}
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+    {% if variant == 'success' %}bg-emerald-500/10 text-emerald-400 border border-emerald-500/20
+    {% elif variant == 'danger' %}bg-red-500/10 text-red-400 border border-red-500/20
+    {% elif variant == 'warning' %}bg-yellow-500/10 text-yellow-400 border border-yellow-500/20
+    {% else %}bg-violet-500/10 text-violet-400 border border-violet-500/20{% endif %}">
+    {{ label }}
+</span>
