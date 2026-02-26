@@ -167,10 +167,10 @@
 
 ### Sprint 5 — Dashboard e Portfólio
 
-#### Tarefa 5.1 — Lógica de portfólio
-- [ ] 5.1.1 Criar arquivo `portfolios/services.py` com função `get_portfolio_summary(user)` que retorna dados consolidados da carteira
-- [ ] 5.1.2 A função deve calcular: total investido (soma de compras - soma de vendas), lista de ativos com saldo positivo, quantidade e preço médio ponderado por ativo
-- [ ] 5.1.3 Criar função `get_composition_by_type(user)` retornando o percentual investido por tipo de ativo
+#### Tarefa 5.1 — Lógica de portfólio ✅
+- [X] 5.1.1 Criar arquivo `portfolios/services.py` com função `get_portfolio_summary(user)` que retorna dados consolidados da carteira
+- [X] 5.1.2 A função deve calcular: total investido (soma de compras - soma de vendas), lista de ativos com saldo positivo, quantidade e preço médio ponderado por ativo
+- [X] 5.1.3 Criar função `get_composition_by_type(user)` retornando o percentual investido por tipo de ativo
 
 #### Tarefa 5.2 — View do Dashboard
 - [ ] 5.2.1 Criar `DashboardView` (TemplateView ou View) em `portfolios/views.py` com `LoginRequiredMixin`
