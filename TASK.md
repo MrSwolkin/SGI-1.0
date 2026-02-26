@@ -137,20 +137,20 @@
 #### Tarefa 4.2 — Admin de Transaction ✅
 - [X] 4.2.1 Registrar `Transaction` no `transactions/admin.py` com `list_display`, `list_filter` e `search_fields`
 
-#### Tarefa 4.3 — Form de Transaction
-- [ ] 4.3.1 Criar `TransactionForm` em `transactions/forms.py` usando `ModelForm`
-- [ ] 4.3.2 Excluir o campo `user` do formulário (será preenchido na view)
-- [ ] 4.3.3 Adicionar widget `DateInput` com `type='date'` para `operation_date`
-- [ ] 4.3.4 Estilizar todos os widgets com as classes Tailwind do design system
+#### Tarefa 4.3 — Form de Transaction ✅
+- [X] 4.3.1 Criar `TransactionForm` em `transactions/forms.py` usando `ModelForm`
+- [X] 4.3.2 Excluir o campo `user` do formulário (será preenchido na view)
+- [X] 4.3.3 Adicionar widget `DateInput` com `type='date'` para `operation_date`
+- [X] 4.3.4 Estilizar todos os widgets com as classes Tailwind do design system
 
-#### Tarefa 4.4 — Views de Transaction
-- [ ] 4.4.1 Criar `TransactionListView` (ListView) com `LoginRequiredMixin`, filtrando apenas transações do usuário logado
-- [ ] 4.4.2 Criar `TransactionCreateView` (CreateView) com `LoginRequiredMixin`
-- [ ] 4.4.3 Sobrescrever `form_valid` para associar `form.instance.user = self.request.user`
-- [ ] 4.4.4 Criar `TransactionUpdateView` (UpdateView) com `LoginRequiredMixin`
-- [ ] 4.4.5 Sobrescrever `get_queryset` para garantir que o usuário só edite suas próprias transações
-- [ ] 4.4.6 Criar `TransactionDeleteView` (DeleteView) com `LoginRequiredMixin` e mesmo filtro de queryset
-- [ ] 4.4.7 Adicionar mensagens de sucesso em create, update e delete
+#### Tarefa 4.4 — Views de Transaction ✅
+- [X] 4.4.1 Criar `TransactionListView` (ListView) com `LoginRequiredMixin`, filtrando apenas transações do usuário logado
+- [X] 4.4.2 Criar `TransactionCreateView` (CreateView) com `LoginRequiredMixin`
+- [X] 4.4.3 Sobrescrever `form_valid` para associar `form.instance.user = self.request.user`
+- [X] 4.4.4 Criar `TransactionUpdateView` (UpdateView) com `LoginRequiredMixin`
+- [X] 4.4.5 Sobrescrever `get_queryset` para garantir que o usuário só edite suas próprias transações
+- [X] 4.4.6 Criar `TransactionDeleteView` (DeleteView) com `LoginRequiredMixin` e mesmo filtro de queryset
+- [X] 4.4.7 Adicionar mensagens de sucesso em create, update e delete
 
 #### Tarefa 4.5 — Templates de Transaction
 - [ ] 4.5.1 Criar `templates/transactions/transaction_list.html` com tabela de transações e badges coloridos por tipo
