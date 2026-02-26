@@ -125,7 +125,7 @@
 
 ---
 
-### Sprint 4 — App de Transações (Transactions)
+### Sprint 4 — App de Transações (Transactions) ✅
 
 #### Tarefa 4.1 — Model `Transaction` ✅
 - [X] 4.1.1 Criar model `Transaction` em `transactions/models.py` com campos: `user` (FK para `settings.AUTH_USER_MODEL`), `asset` (FK para `Asset`), `transaction_type` (CharField choices: BUY, SELL), `quantity` (DecimalField), `unit_price` (DecimalField), `fee` (DecimalField, default=0), `operation_date` (DateField)
@@ -152,16 +152,16 @@
 - [X] 4.4.6 Criar `TransactionDeleteView` (DeleteView) com `LoginRequiredMixin` e mesmo filtro de queryset
 - [X] 4.4.7 Adicionar mensagens de sucesso em create, update e delete
 
-#### Tarefa 4.5 — Templates de Transaction
-- [ ] 4.5.1 Criar `templates/transactions/transaction_list.html` com tabela de transações e badges coloridos por tipo
-- [ ] 4.5.2 Criar `templates/transactions/transaction_form.html` para criação e edição
-- [ ] 4.5.3 Criar `templates/transactions/transaction_confirm_delete.html` com modal/página de confirmação
-- [ ] 4.5.4 Implementar filtro por ativo e tipo usando GET params no `TransactionListView`
-- [ ] 4.5.5 Tratar estado vazio com componente `empty_state.html`
+#### Tarefa 4.5 — Templates de Transaction ✅
+- [X] 4.5.1 Criar `templates/transactions/transaction_list.html` com tabela de transações e badges coloridos por tipo
+- [X] 4.5.2 Criar `templates/transactions/transaction_form.html` para criação e edição
+- [X] 4.5.3 Criar `templates/transactions/transaction_confirm_delete.html` com modal/página de confirmação
+- [X] 4.5.4 Implementar filtro por ativo e tipo usando GET params no `TransactionListView`
+- [X] 4.5.5 Tratar estado vazio com componente `empty_state.html`
 
-#### Tarefa 4.6 — URLs de Transaction
-- [ ] 4.6.1 Criar `transactions/urls.py` com rotas: `list`, `create`, `update/<pk>/`, `delete/<pk>/`
-- [ ] 4.6.2 Incluir no `core/urls.py` com namespace `transactions`
+#### Tarefa 4.6 — URLs de Transaction ✅
+- [X] 4.6.1 Criar `transactions/urls.py` com rotas: `list`, `create`, `update/<pk>/`, `delete/<pk>/`
+- [X] 4.6.2 Incluir no `core/urls.py` com namespace `transactions`
 
 ---
 
