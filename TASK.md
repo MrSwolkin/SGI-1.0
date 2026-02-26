@@ -127,12 +127,12 @@
 
 ### Sprint 4 — App de Transações (Transactions)
 
-#### Tarefa 4.1 — Model `Transaction`
-- [ ] 4.1.1 Criar model `Transaction` em `transactions/models.py` com campos: `user` (FK para `settings.AUTH_USER_MODEL`), `asset` (FK para `Asset`), `transaction_type` (CharField choices: BUY, SELL), `quantity` (DecimalField), `unit_price` (DecimalField), `fee` (DecimalField, default=0), `operation_date` (DateField)
-- [ ] 4.1.2 Adicionar campos `created_at` e `updated_at`
-- [ ] 4.1.3 Implementar `__str__` retornando tipo, ticker e data
-- [ ] 4.1.4 Criar propriedade `total_value` calculando `quantity * unit_price + fee`
-- [ ] 4.1.5 Criar e executar migração do model Transaction
+#### Tarefa 4.1 — Model `Transaction` ✅
+- [X] 4.1.1 Criar model `Transaction` em `transactions/models.py` com campos: `user` (FK para `settings.AUTH_USER_MODEL`), `asset` (FK para `Asset`), `transaction_type` (CharField choices: BUY, SELL), `quantity` (DecimalField), `unit_price` (DecimalField), `fee` (DecimalField, default=0), `operation_date` (DateField)
+- [X] 4.1.2 Adicionar campos `created_at` e `updated_at`
+- [X] 4.1.3 Implementar `__str__` retornando tipo, ticker e data
+- [X] 4.1.4 Criar propriedade `total_value` calculando `quantity * unit_price + fee`
+- [X] 4.1.5 Criar e executar migração do model Transaction
 
 #### Tarefa 4.2 — Admin de Transaction
 - [ ] 4.2.1 Registrar `Transaction` no `transactions/admin.py` com `list_display`, `list_filter` e `search_fields`
