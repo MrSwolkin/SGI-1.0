@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}{% if object %}Editar Transação{% else %}Nova Transação{% endif %}{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto space-y-6">
+    <!-- Header -->
+    <div>
+        <h1 class="text-3xl font-bold text-gray-100">{% if object %}Editar Transação{% else %}Nova Transação{% endif %}</h1>
+        <p class="mt-2 text-sm text-gray-400">{% if object %}Atualize os dados da transação.{% else %}Registre uma nova operação de compra ou venda.{% endif %}</p>
+    </div>
+
+    <!-- Form card -->
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-xl">
+        <form method="post" class="space-y-5">
+            {% csrf_token %}
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {% include "components/form_field.html" with field=form.asset %}
+                {% include "components/form_field.html" with field=form.transaction_type %}
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {% include "components/form_field.html" with field=form.quantity %}
+                {% include "components/form_field.html" with field=form.unit_price %}
+                {% include "components/form_field.html" with field=form.fee %}
+            </div>
+
+            {% include "components/form_field.html" with field=form.operation_date %}
+
+            <div class="flex items-center gap-3 pt-2">
+                <button type="submit"
+                        class="inline-flex items-center justify-center px-6 py-2.5 rounded-lg text-sm font-semibold bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-500 hover:to-indigo-500 transition-all shadow-lg shadow-violet-500/25">
+                    {% if object %}Salvar{% else %}Registrar{% endif %}
+                </button>
+                <a href="{% url 'transactions:list' %}"
+                    class="inline-flex items-center justify-center px-6 py-2.5 rounded-lg text-sm font-medium border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-gray-100 transition-colors">
+                    Cancelar
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

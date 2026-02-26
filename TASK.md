@@ -125,43 +125,43 @@
 
 ---
 
-### Sprint 4 — App de Transações (Transactions)
+### Sprint 4 — App de Transações (Transactions) ✅
 
-#### Tarefa 4.1 — Model `Transaction`
-- [ ] 4.1.1 Criar model `Transaction` em `transactions/models.py` com campos: `user` (FK para `settings.AUTH_USER_MODEL`), `asset` (FK para `Asset`), `transaction_type` (CharField choices: BUY, SELL), `quantity` (DecimalField), `unit_price` (DecimalField), `fee` (DecimalField, default=0), `operation_date` (DateField)
-- [ ] 4.1.2 Adicionar campos `created_at` e `updated_at`
-- [ ] 4.1.3 Implementar `__str__` retornando tipo, ticker e data
-- [ ] 4.1.4 Criar propriedade `total_value` calculando `quantity * unit_price + fee`
-- [ ] 4.1.5 Criar e executar migração do model Transaction
+#### Tarefa 4.1 — Model `Transaction` ✅
+- [X] 4.1.1 Criar model `Transaction` em `transactions/models.py` com campos: `user` (FK para `settings.AUTH_USER_MODEL`), `asset` (FK para `Asset`), `transaction_type` (CharField choices: BUY, SELL), `quantity` (DecimalField), `unit_price` (DecimalField), `fee` (DecimalField, default=0), `operation_date` (DateField)
+- [X] 4.1.2 Adicionar campos `created_at` e `updated_at`
+- [X] 4.1.3 Implementar `__str__` retornando tipo, ticker e data
+- [X] 4.1.4 Criar propriedade `total_value` calculando `quantity * unit_price + fee`
+- [X] 4.1.5 Criar e executar migração do model Transaction
 
-#### Tarefa 4.2 — Admin de Transaction
-- [ ] 4.2.1 Registrar `Transaction` no `transactions/admin.py` com `list_display`, `list_filter` e `search_fields`
+#### Tarefa 4.2 — Admin de Transaction ✅
+- [X] 4.2.1 Registrar `Transaction` no `transactions/admin.py` com `list_display`, `list_filter` e `search_fields`
 
-#### Tarefa 4.3 — Form de Transaction
-- [ ] 4.3.1 Criar `TransactionForm` em `transactions/forms.py` usando `ModelForm`
-- [ ] 4.3.2 Excluir o campo `user` do formulário (será preenchido na view)
-- [ ] 4.3.3 Adicionar widget `DateInput` com `type='date'` para `operation_date`
-- [ ] 4.3.4 Estilizar todos os widgets com as classes Tailwind do design system
+#### Tarefa 4.3 — Form de Transaction ✅
+- [X] 4.3.1 Criar `TransactionForm` em `transactions/forms.py` usando `ModelForm`
+- [X] 4.3.2 Excluir o campo `user` do formulário (será preenchido na view)
+- [X] 4.3.3 Adicionar widget `DateInput` com `type='date'` para `operation_date`
+- [X] 4.3.4 Estilizar todos os widgets com as classes Tailwind do design system
 
-#### Tarefa 4.4 — Views de Transaction
-- [ ] 4.4.1 Criar `TransactionListView` (ListView) com `LoginRequiredMixin`, filtrando apenas transações do usuário logado
-- [ ] 4.4.2 Criar `TransactionCreateView` (CreateView) com `LoginRequiredMixin`
-- [ ] 4.4.3 Sobrescrever `form_valid` para associar `form.instance.user = self.request.user`
-- [ ] 4.4.4 Criar `TransactionUpdateView` (UpdateView) com `LoginRequiredMixin`
-- [ ] 4.4.5 Sobrescrever `get_queryset` para garantir que o usuário só edite suas próprias transações
-- [ ] 4.4.6 Criar `TransactionDeleteView` (DeleteView) com `LoginRequiredMixin` e mesmo filtro de queryset
-- [ ] 4.4.7 Adicionar mensagens de sucesso em create, update e delete
+#### Tarefa 4.4 — Views de Transaction ✅
+- [X] 4.4.1 Criar `TransactionListView` (ListView) com `LoginRequiredMixin`, filtrando apenas transações do usuário logado
+- [X] 4.4.2 Criar `TransactionCreateView` (CreateView) com `LoginRequiredMixin`
+- [X] 4.4.3 Sobrescrever `form_valid` para associar `form.instance.user = self.request.user`
+- [X] 4.4.4 Criar `TransactionUpdateView` (UpdateView) com `LoginRequiredMixin`
+- [X] 4.4.5 Sobrescrever `get_queryset` para garantir que o usuário só edite suas próprias transações
+- [X] 4.4.6 Criar `TransactionDeleteView` (DeleteView) com `LoginRequiredMixin` e mesmo filtro de queryset
+- [X] 4.4.7 Adicionar mensagens de sucesso em create, update e delete
 
-#### Tarefa 4.5 — Templates de Transaction
-- [ ] 4.5.1 Criar `templates/transactions/transaction_list.html` com tabela de transações e badges coloridos por tipo
-- [ ] 4.5.2 Criar `templates/transactions/transaction_form.html` para criação e edição
-- [ ] 4.5.3 Criar `templates/transactions/transaction_confirm_delete.html` com modal/página de confirmação
-- [ ] 4.5.4 Implementar filtro por ativo e tipo usando GET params no `TransactionListView`
-- [ ] 4.5.5 Tratar estado vazio com componente `empty_state.html`
+#### Tarefa 4.5 — Templates de Transaction ✅
+- [X] 4.5.1 Criar `templates/transactions/transaction_list.html` com tabela de transações e badges coloridos por tipo
+- [X] 4.5.2 Criar `templates/transactions/transaction_form.html` para criação e edição
+- [X] 4.5.3 Criar `templates/transactions/transaction_confirm_delete.html` com modal/página de confirmação
+- [X] 4.5.4 Implementar filtro por ativo e tipo usando GET params no `TransactionListView`
+- [X] 4.5.5 Tratar estado vazio com componente `empty_state.html`
 
-#### Tarefa 4.6 — URLs de Transaction
-- [ ] 4.6.1 Criar `transactions/urls.py` com rotas: `list`, `create`, `update/<pk>/`, `delete/<pk>/`
-- [ ] 4.6.2 Incluir no `core/urls.py` com namespace `transactions`
+#### Tarefa 4.6 — URLs de Transaction ✅
+- [X] 4.6.1 Criar `transactions/urls.py` com rotas: `list`, `create`, `update/<pk>/`, `delete/<pk>/`
+- [X] 4.6.2 Incluir no `core/urls.py` com namespace `transactions`
 
 ---
 

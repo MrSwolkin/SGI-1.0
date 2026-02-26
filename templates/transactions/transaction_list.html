@@ -4,9 +4,99 @@
 
 {% block content %}
 <div class="space-y-6">
-    <h1 class="text-3xl font-bold text-gray-100">Transações</h1>
-    <div class="bg-gray-900 border border-gray-800 rounded-xl">
-        {% include "components/empty_state.html" with title="Nenhuma transação registrada" description="As transações serão implementadas em breve. Cadastre seus ativos primeiro." action_url=assets_url action_label="Ver Ativos" %}
+    <!-- Header -->
+    <div class="flex items-center justify-between">
+        <h1 class="text-3xl font-bold text-gray-100">Transações</h1>
+        <a href="{% url 'transactions:create' %}"
+           class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:from-violet-500 hover:to-indigo-500 transition-all shadow-lg shadow-violet-500/25">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+            </svg>
+            Nova Transação
+        </a>
     </div>
+
+    <!-- Filters -->
+    <form method="get" class="flex flex-wrap items-end gap-4">
+        <div>
+            <label class="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-1.5">Ativo</label>
+            <select name="asset"
+                    class="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-100 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-colors">
+                <option value="">Todos</option>
+                {% for asset in filter_assets %}
+                <option value="{{ asset.pk }}" {% if asset.pk|stringformat:"d" == selected_asset %}selected{% endif %}>{{ asset.ticker }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label class="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-1.5">Tipo</label>
+            <select name="type"
+                    class="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-100 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-colors">
+                <option value="">Todos</option>
+                <option value="BUY" {% if selected_type == "BUY" %}selected{% endif %}>Compra</option>
+                <option value="SELL" {% if selected_type == "SELL" %}selected{% endif %}>Venda</option>
+            </select>
+        </div>
+        <button type="submit"
+                class="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-gray-100 transition-colors">
+            Filtrar
+        </button>
+        {% if selected_asset or selected_type %}
+        <a href="{% url 'transactions:list' %}" class="text-sm text-violet-400 hover:text-violet-300 transition-colors">Limpar filtros</a>
+        {% endif %}
+    </form>
+
+    {% if transactions %}
+    <!-- Table -->
+    <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
+        <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+                <thead>
+                    <tr class="border-b border-gray-800">
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Data</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Tipo</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">Ativo</th>
+                        <th class="px-6 py-3 text-right text-xs font-medium text-gray-400 uppercase tracking-wider">Qtd.</th>
+                        <th class="px-6 py-3 text-right text-xs font-medium text-gray-400 uppercase tracking-wider">Preço Unit.</th>
+                        <th class="px-6 py-3 text-right text-xs font-medium text-gray-400 uppercase tracking-wider">Taxa</th>
+                        <th class="px-6 py-3 text-right text-xs font-medium text-gray-400 uppercase tracking-wider">Total</th>
+                        <th class="px-6 py-3 text-right text-xs font-medium text-gray-400 uppercase tracking-wider">Ações</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-800">
+                    {% for transaction in transactions %}
+                    <tr class="hover:bg-gray-800/50 transition-colors">
+                        <td class="px-6 py-4 text-gray-300 whitespace-nowrap">{{ transaction.operation_date|date:"d/m/Y" }}</td>
+                        <td class="px-6 py-4">
+                            {% if transaction.transaction_type == "BUY" %}
+                                {% include "components/badge.html" with label="Compra" variant="success" %}
+                            {% else %}
+                                {% include "components/badge.html" with label="Venda" variant="danger" %}
+                            {% endif %}
+                        </td>
+                        <td class="px-6 py-4 font-medium text-gray-100">{{ transaction.asset.ticker }}</td>
+                        <td class="px-6 py-4 text-right text-gray-300">{{ transaction.quantity }}</td>
+                        <td class="px-6 py-4 text-right text-gray-300">R$ {{ transaction.unit_price }}</td>
+                        <td class="px-6 py-4 text-right text-gray-300">R$ {{ transaction.fee }}</td>
+                        <td class="px-6 py-4 text-right font-medium {% if transaction.transaction_type == 'BUY' %}text-emerald-400{% else %}text-red-400{% endif %}">
+                            R$ {{ transaction.total_value }}
+                        </td>
+                        <td class="px-6 py-4 text-right whitespace-nowrap">
+                            <a href="{% url 'transactions:update' transaction.pk %}" class="text-violet-400 hover:text-violet-300 transition-colors mr-3">Editar</a>
+                            <a href="{% url 'transactions:delete' transaction.pk %}" class="text-red-400 hover:text-red-300 transition-colors">Excluir</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% else %}
+    <!-- Empty state -->
+    <div class="bg-gray-900 border border-gray-800 rounded-xl">
+        {% url 'transactions:create' as create_url %}
+        {% include "components/empty_state.html" with title="Nenhuma transação registrada" description="Registre sua primeira transação de compra ou venda." action_url=create_url action_label="Nova Transação" %}
+    </div>
+    {% endif %}
 </div>
 {% endblock %}
