@@ -165,29 +165,29 @@
 
 ---
 
-### Sprint 5 — Dashboard e Portfólio
+### Sprint 5 — Dashboard e Portfólio ✅
 
-#### Tarefa 5.1 — Lógica de portfólio
-- [ ] 5.1.1 Criar arquivo `portfolios/services.py` com função `get_portfolio_summary(user)` que retorna dados consolidados da carteira
-- [ ] 5.1.2 A função deve calcular: total investido (soma de compras - soma de vendas), lista de ativos com saldo positivo, quantidade e preço médio ponderado por ativo
-- [ ] 5.1.3 Criar função `get_composition_by_type(user)` retornando o percentual investido por tipo de ativo
+#### Tarefa 5.1 — Lógica de portfólio ✅
+- [X] 5.1.1 Criar arquivo `portfolios/services.py` com função `get_portfolio_summary(user)` que retorna dados consolidados da carteira
+- [X] 5.1.2 A função deve calcular: total investido (soma de compras - soma de vendas), lista de ativos com saldo positivo, quantidade e preço médio ponderado por ativo
+- [X] 5.1.3 Criar função `get_composition_by_type(user)` retornando o percentual investido por tipo de ativo
 
-#### Tarefa 5.2 — View do Dashboard
-- [ ] 5.2.1 Criar `DashboardView` (TemplateView ou View) em `portfolios/views.py` com `LoginRequiredMixin`
-- [ ] 5.2.2 No `get_context_data`, chamar `get_portfolio_summary` e `get_composition_by_type` e passar os resultados para o template
-- [ ] 5.2.3 Passar os dados do gráfico como JSON serializado para o template
+#### Tarefa 5.2 — View do Dashboard ✅
+- [X] 5.2.1 Criar `DashboardView` (TemplateView ou View) em `portfolios/views.py` com `LoginRequiredMixin`
+- [X] 5.2.2 No `get_context_data`, chamar `get_portfolio_summary` e `get_composition_by_type` e passar os resultados para o template
+- [X] 5.2.3 Passar os dados do gráfico como JSON serializado para o template
 
-#### Tarefa 5.3 — Template do Dashboard
-- [ ] 5.3.1 Criar `templates/portfolios/dashboard.html` extendendo `base.html`
-- [ ] 5.3.2 Implementar grid de 4 cards de métricas (total investido, nº de ativos, maior posição, última transação)
-- [ ] 5.3.3 Implementar gráfico de composição por tipo usando Chart.js (doughnut chart)
-- [ ] 5.3.4 Implementar tabela resumida das posições em carteira (ativo, quantidade, preço médio, valor atual estimado)
-- [ ] 5.3.5 Exibir estado vazio quando não há transações cadastradas
+#### Tarefa 5.3 — Template do Dashboard ✅
+- [X] 5.3.1 Criar `templates/portfolios/dashboard.html` extendendo `base.html`
+- [X] 5.3.2 Implementar grid de 4 cards de métricas (total investido, nº de ativos, maior posição, última transação)
+- [X] 5.3.3 Implementar gráfico de composição por tipo usando Chart.js (doughnut chart)
+- [X] 5.3.4 Implementar tabela resumida das posições em carteira (ativo, quantidade, preço médio, valor atual estimado)
+- [X] 5.3.5 Exibir estado vazio quando não há transações cadastradas
 
-#### Tarefa 5.4 — URLs do Dashboard
-- [ ] 5.4.1 Criar `portfolios/urls.py` com rota `/dashboard/` para `DashboardView`
-- [ ] 5.4.2 Incluir no `core/urls.py` com namespace `portfolios`
-- [ ] 5.4.3 Configurar `LOGIN_REDIRECT_URL = '/dashboard/'` no `settings.py`
+#### Tarefa 5.4 — URLs do Dashboard ✅
+- [X] 5.4.1 Criar `portfolios/urls.py` com rota `/dashboard/` para `DashboardView`
+- [X] 5.4.2 Incluir no `core/urls.py` com namespace `portfolios`
+- [X] 5.4.3 Configurar `LOGIN_REDIRECT_URL = '/dashboard/'` no `settings.py`
 
 ---
 
