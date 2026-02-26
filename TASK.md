@@ -134,8 +134,8 @@
 - [X] 4.1.4 Criar propriedade `total_value` calculando `quantity * unit_price + fee`
 - [X] 4.1.5 Criar e executar migração do model Transaction
 
-#### Tarefa 4.2 — Admin de Transaction
-- [ ] 4.2.1 Registrar `Transaction` no `transactions/admin.py` com `list_display`, `list_filter` e `search_fields`
+#### Tarefa 4.2 — Admin de Transaction ✅
+- [X] 4.2.1 Registrar `Transaction` no `transactions/admin.py` com `list_display`, `list_filter` e `search_fields`
 
 #### Tarefa 4.3 — Form de Transaction
 - [ ] 4.3.1 Criar `TransactionForm` em `transactions/forms.py` usando `ModelForm`
